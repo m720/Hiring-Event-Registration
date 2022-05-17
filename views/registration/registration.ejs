@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+
+</head>
+
+<body>
+    <h1>Registeration</h1>
+    <main>
+        <form action="/register/Registeration" method="POST">
+          <div class="form_field">
+            <label for="q1">Select a position</label>
+            <select name="q1">
+                <optgroup>
+                    <option >Software Engineer</option>
+                    <option >Data Scientist</option>
+                    <option >Data Engineer</option>
+                    <option >UI / UX Designer</option>
+                </optgroup>
+            </select>
+          </div>
+          <div class="form_field">
+            <label for="q2">How many years of experience in this field?</label>
+            <input type="number" name="q2" id="q2" value="">
+          </div>
+          <div class="form_field">
+            <label for="q3"> What makes you unique in all candidates?</label>
+            <input type="text" name="q3" id="q3" value="">
+          </div>
+          <div class="form_field">
+            <label for="q4">Why should I choose you?</label>
+            <input type="text" name="q4" id="q4" value="">
+          </div>
+          <div class="form_field">
+            <label for="q5">Explain your career in this field, Briefly (Max : 100 Word)</label>
+            <input type="text" name="q5" id="q5" value="">
+          </div>
+          <div class="form_field">
+            <label for="q6">Upload your CV</label>
+            <input type="file" name="q6" id="q6">
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
