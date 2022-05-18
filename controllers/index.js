@@ -1,5 +1,4 @@
-
-exports.getIndex =(req, res, next)=>{
-    //load index page
-    res.render('index');
-}
+exports.getIndex = (req, res, next) => {
+  //load index page
+  res.render("index");
+};

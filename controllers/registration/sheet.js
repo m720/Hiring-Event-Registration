@@ -1,31 +1,30 @@
-const fs = require('fs');
-const readline = require('readline');
-const {google} = require('googleapis');
-const path =require('path')
+const fs = require("fs");
+const readline = require("readline");
+const { google } = require("googleapis");
+const path = require("path");
 
- async function updateSheet(data){
-  const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
+async function updateSheet(data) {
+  const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
   const auth = new google.auth.GoogleAuth({
     keyFile: "./utils/credentials.json",
-    scopes: SCOPES
+    scopes: SCOPES,
   });
-  
+
   //create client instance for auth
   const client = await auth.getClient();
-  
+
   //instance of Sheets API
-  const googleSheets = google.sheets({version: 'v4', auth: client});
+  const googleSheets = google.sheets({ version: "v4", auth: client });
 
   //sheet ID
-  spreadsheetId ="1WkB6I5LrSmZA9VjMHjcFD1romu5lUROEKtHEsF-5a3g";
+  spreadsheetId = "1WkB6I5LrSmZA9VjMHjcFD1romu5lUROEKtHEsF-5a3g";
 
   //get metadata
   const metaData = await googleSheets.spreadsheets.get({
     auth,
-    spreadsheetId
-  })
-
+    spreadsheetId,
+  });
 
   //write data to sheet
   try {
@@ -35,9 +34,9 @@ const path =require('path')
       range: "Sheet1!A:F",
       valueInputOption: "USER_ENTERED",
       resource: {
-        values: [data]
-      }
-    })
+        values: [data],
+      },
+    });
   } catch (err) {
     console.log(err);
     return false;
@@ -45,5 +44,4 @@ const path =require('path')
   return true;
 }
 
-
-module.exports = {updateSheet};
+module.exports = { updateSheet };
