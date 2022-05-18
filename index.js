@@ -37,3 +37,4 @@ app.use(indexroutes);
 app.use(errorController.get404);
 
 app.listen(3001);
+console.log("app is running on port 3001");
