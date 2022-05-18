@@ -22,3 +22,4 @@ https://docs.google.com/spreadsheets/d/1WkB6I5LrSmZA9VjMHjcFD1romu5lUROEKtHEsF-5
   node index
 ```
 > no need to run additional code for front end as i used ejs
+> make sure to create folder './utils/CVs' if it doesn't exist
