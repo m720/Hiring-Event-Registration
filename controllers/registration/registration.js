@@ -1,5 +1,5 @@
 const s3Mod = require('./s3');
-
+const sheetMod =require('./sheet');
     //load registration page
 function getRegistration(req, res, next){
     res.render('./registration/registration');
@@ -15,7 +15,13 @@ function postRegistration(req, res, next){
     resolve(fileLink);
     }).then((fileLink)=>{
         console.log(fileLink);
-        res.send("sucessfull");
+        data.push(fileLink);
+        console.log(data);
+        
+        if(sheetMod.updateSheet(data)){
+            res.send("sucessfull");
+        }
+        res.send("regestraion failed");
     })
 
 
