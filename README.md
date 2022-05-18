@@ -4,7 +4,10 @@ node js project, collects data from form, upload the CV to amazon S3, store the 
 
 ## URL
 http://54.196.133.75:3001
+>the app is running on the above link
 >if the page doesn't connect make sure you are using http not https
+or you can try:
+http://ec2-54-196-133-75.compute-1.amazonaws.com:3001/
 
 ## s3 Bucket
 nextleveltechhiringeventtask1
